@@ -1,0 +1,11 @@
+<resources>
+
+    <string name="app_name">Earlybird</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_main">Earlybird</string>
+    <string name="twitter_callback">earlybird://callback</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_user">UserActivity</string>
+    <string name="title_activity_tweet_dialog">TweetDialog</string>
+
+</resources>

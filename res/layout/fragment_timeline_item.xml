@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:paddingBottom="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/name_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/retweet_badge"
+            android:layout_toRightOf="@+id/profile_image"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@+id/user_name"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/screen_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/user_name"
+                android:text="@+id/screen_name"
+                android:textColor="#736F6E" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/status_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name_layout"
+            android:layout_toRightOf="@+id/profile_image"
+            android:text="@+id/status_text" />
+
+        <TextView
+            android:id="@+id/retweeted_by"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/time_span"
+            android:layout_toRightOf="@+id/profile_image"
+            android:text="@+id/retweeted_by"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#736F6E" />
+
+        <TextView
+            android:id="@+id/time_span"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/status_text"
+            android:layout_toRightOf="@+id/profile_image"
+            android:layout_below="@+id/status_text"
+            android:text="@+id/time_span"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="#736F6E" />
+
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:adjustViewBounds="true"
+            android:padding="10dp" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/retweet_badge"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>

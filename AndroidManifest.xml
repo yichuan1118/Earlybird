@@ -1,0 +1,101 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.metaisle.earlybird"
+    android:versionCode="7"
+    android:versionName="2.4" >
+
+    <!-- Collector -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <!-- Collector -->
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="14" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Holo.Theme.Sherlock" >
+        <activity
+            android:name=".app.MainPagerActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".app.StatusActivity" >
+        </activity>
+        <activity android:name=".app.OAuthActivity" >
+        </activity>
+        <activity android:name=".app.WebActivity" >
+        </activity>
+        <activity android:name=".app.UserActivity" >
+        </activity>
+        <activity android:name=".app.TweetActivity" >
+        </activity>
+        <activity android:name=".app.MessageActivity" >
+        </activity>
+        <activity android:name=".app.TimelineActivity" >
+        </activity>
+        <activity android:name=".app.PrefsActivity" >
+        </activity>
+        <activity android:name=".app.RelationshipActivity" >
+        </activity>
+
+        <provider
+            android:name=".data.Provider"
+            android:authorities="com.metaisle.earlybird.data.Provider"
+            android:exported="false" >
+        </provider>
+
+        <!-- Collector -->
+        <service
+            android:name="com.metaisle.profiler.CollectorService"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" >
+                </action>
+                <action android:name="android.intent.action.USER_PRESENT" >
+                </action>
+                <action android:name="android.intent.action.SCREEN_OFF" >
+                </action>
+                <action android:name="android.intent.action.SCREEN_ON" >
+                </action>
+                <action android:name="android.intent.action.DOCK_EVENT" >
+                </action>
+                <action android:name="android.intent.action.HEADSET_PLUG" >
+                </action>
+                <action android:name="PhotoSync.Profiler.RESTART_SERVICE" >
+                </action>
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+
+        <receiver android:name="com.metaisle.profiler.RestartReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <!-- Collector -->
+
+        <receiver android:name=".receiver.BootReceiver" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

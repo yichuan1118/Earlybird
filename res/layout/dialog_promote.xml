@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/promote_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dip"
+        android:drawableLeft="@drawable/attitude_like"
+        android:drawablePadding="10dip"
+        android:text="Thank you!"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/promote_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:drawableLeft="@drawable/attitude_laugh"
+        android:drawablePadding="10dip"
+        android:text="Sure!" />
+
+    <Button
+        android:id="@+id/promote_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/attitude_unlike"
+        android:drawablePadding="10dip"
+        android:text="Not now." />
+
+    <TextView
+        android:id="@+id/promote_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/promote_title"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp"
+        android:text="Please help us promote Earlybird if you like it, thanks." />
+
+    <EditText
+        android:id="@+id/promote_tweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/promote_text"
+        android:layout_alignRight="@+id/promote_text"
+        android:layout_below="@+id/promote_text"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="Please help us promote Earlybird"
+        android:text="I am using #Earlybird for Android, a super fast twitter client." >
+
+        <requestFocus />
+    </EditText>
+
+</RelativeLayout>

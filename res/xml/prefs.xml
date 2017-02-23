@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:holo="http://schemas.android.com/apk/res-auto" >
+
+    <Preference
+        holo:selectable="false"
+        holo:title="Settings" />
+
+    <PreferenceCategory holo:title="Caching" >
+        <SwitchPreference
+            holo:key="caching_on_mobile"
+            holo:summaryOff="Caching on Wifi only"
+            holo:summaryOn="Caching on Mobile and Wifi"
+            holo:switchTextOff="Off"
+            holo:switchTextOn="On"
+            holo:title="Caching on Mobile" />
+    </PreferenceCategory>    
+
+</PreferenceScreen>
+
+
+
+
+<!-- <?xml version="1.0" encoding="utf-8"?> -->
+<!-- <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" > -->
+
+<!-- <PreferenceCategory android:title="AutoUpload Settings" > -->
+<!-- <SwitchPreference -->
+<!-- android:key="caching_wifi_only" -->
+<!-- android:summaryOff="Wifi only" -->
+<!-- android:summaryOn="Wifi and Mobile" -->
+<!-- android:switchTextOff="Wifi" -->
+<!-- android:switchTextOn="All" -->
+<!-- android:title="Caching on Wifi only" /> -->
+<!-- </PreferenceCategory> -->
+
+<!-- </PreferenceScreen> -->
+
